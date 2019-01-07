@@ -409,7 +409,7 @@ class Runner {
    * @return {string}
    * @throws {Error}
    */
-  static resolvePlugin(plugin, configDir, category) {
+  static resolveModule(plugin, configDir, category) {
     // First try straight `require()`. Unlikely to be specified relative to this
     // file, but adds support for Lighthouse plugins in npm modules as
     // `require()` walks up parent directories looking inside any node_modules/
