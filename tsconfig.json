@@ -22,5 +22,6 @@
   "exclude": [
     "lighthouse-core/test/**/*.js",
     "clients/test/**/*.js",
+    "lighthouse-cli/test/fixtures/**/*.js",
   ]
 }
