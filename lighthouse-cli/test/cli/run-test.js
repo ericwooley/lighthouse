@@ -64,8 +64,9 @@ describe('flag coercing', () => {
 
 describe('saveResults', () => {
   it('will quit early if we\'re in gather mode', async () => {
-    // @ts-ignore - testing a thin part of the interface
-    const result = await run.saveResults(undefined, {gatherMode: true});
+    const result = await run.saveResults(
+      /** @type {LH.RunnerResult} */ ({}),
+      /** @type {LH.CliFlags} */ ({gatherMode: true}));
     assert.equal(result, undefined);
   });
 });
