@@ -12,8 +12,8 @@ const execAsync = promisify(require('child_process').exec);
 const {server, serverForOffline} = require('../fixtures/static-server');
 const log = require('lighthouse-logger');
 
-// TODO(hoten): add to logger. but wait until it's not a separate package.
-const purpleify = ( /** @type {string} */ str) => `${log.purple}${str}${log.reset}`;
+/** @param {string} str */
+const purpleify = str => `${log.purple}${str}${log.reset}`;
 const smokehouseDir = 'lighthouse-cli/test/smokehouse/';
 
 /**
@@ -89,7 +89,7 @@ const SMOKETESTS = [{
 
 /**
  * Display smokehouse output from child process
- * @param {{id: string, stdout : string, stderr: string, error?: Error}} result
+ * @param {{id: string, stdout: string, stderr: string, error?: Error}} result
  */
 function displaySmokehouseOutput(result) {
   console.log(`\n${purpleify(result.id)} smoketest results:`);

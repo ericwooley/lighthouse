@@ -343,7 +343,6 @@ const cli = yargs
 const configPath = resolveLocalOrCwd(cli['config-path']);
 /** @type {ExpectedLHR[]} */
 const expectations = require(resolveLocalOrCwd(cli['expectations-path']));
-// TODO: also add "ExpectedLHR" to each expectations module export?
 
 // Loop sequentially over expectations, comparing against Lighthouse run, and
 // reporting result.
